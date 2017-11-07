@@ -1,0 +1,49 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+% !TEX program = xelatex
+\documentclass[a4paper, 10pt]{article}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2cm, right=2cm, headsep=1cm]{geometry}
+\usepackage{amsmath}
+\usepackage{mathspec}
+\usepackage[sfdefault,semibold,Light]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage[pdfauthor={Alfredo Sánchez Alberca}, pdftitle={Statistical formulas}, colorlinks=true]{hyperref}
+
+% HEADER AND FOOT
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead{\url{http://aprendeconalf.es}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\textfraction}{.1}
+
+% COLORS
+\usepackage{xcolor}
+\definecolor{color1}{RGB}{5,161,230} % Blue
+\definecolor{color2}{RGB}{238,50,36} % Red
+\definecolor{color3}{RGB}{0,205,0} % Green
+\definecolor{color4}{RGB}{243,102,25} % Orange
+
+% LISTS
+\usepackage[shortlabels]{enumitem} % Customize lists
+%\setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
+\setlist[description]{style=sameline,leftmargin=0cm}
+
+% SECTIONS
+\usepackage{titlesec}
+\titleformat{\section}
+{\color{color1}\normalfont\Huge\bfseries}
+{\color{color1}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{color1}\normalfont\Large\bfseries}
+{\color{color1}\thesubsection}{1em}{}
+
+\setlength{\columnsep}{1cm}
+
+\begin{document}
+\include{statistics-formulas}
+\end{document}
+
