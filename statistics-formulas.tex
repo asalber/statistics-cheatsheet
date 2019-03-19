@@ -29,7 +29,7 @@
 \begin{tcolorbox}[hbox, title=Central tendency statistics]
 \begin{minipage}{0.4\textwidth}
 \begin{description}
-\item [Mean] $\bar{x}=\dfrac{\sum x_in_i}{n}$
+\item [Mean] $\bar{x}=\dfrac{\sum x_i}{n}$
 \item [Median] $me$ The value with cum.rel.freq. $F_{me}=0.5$.
 \item [Mode] $mo$ The most frequent value.
 \end{description}
@@ -45,6 +45,13 @@
 \item [Percentiles] $P_1,P_2,\cdots,P_{99}$ divide the distribution into 100 equal parts.\\
       The cum.rel.freq. is $F_{P_i}=i/100$.
 \end{description}
+
+\textbf{Interpolation}
+
+\resizebox{\textwidth}{!}{\input{img/interpolation}}
+
+\[P_i=l_i+\frac{\frac{i}{100}-F_{i-1}}{F_i-F_{i-1}}(l_i-l_{i-1})\]
+
 \end{minipage}
 \end{tcolorbox}
 
@@ -52,7 +59,7 @@
 \begin{minipage}{0.4\textwidth}
 \begin{description}
 \item [Interquartile range] $IQR=Q_3-Q_1$
-\item [Variance] $s^2=\dfrac{\sum (x_i-\bar x)^2n_i}{n}=\dfrac{\sum x_i^2n_i}{n}-\bar x^2$
+\item [Variance] $s^2=\dfrac{\sum (x_i-\bar x)^2}{n}=\dfrac{\sum x_i^2}{n}-\bar x^2$
 \item [Standard deviation] $s=+\sqrt{s^2}$
 \item [Coefficient of variation] $cv=\dfrac{s}{|\bar{x}|}$
 \end{description}
@@ -62,8 +69,8 @@
 \begin{tcolorbox}[hbox, title=Shape statistics]
 \begin{minipage}{0.4\textwidth}
 \begin{description}
-\item [Coefficient of skewness] $g_1=\dfrac{\sum(x_i-\bar{x})^3f_i}{s^3}$
-\item [Coefficient of kurtosis] $g_2=\dfrac{\sum(x_i-\bar{x})^4f_i}{s^4}-3$
+\item [Coefficient of skewness] $g_1=\dfrac{\sum(x_i-\bar{x})^3}{ns^3}$
+\item [Coefficient of kurtosis] $g_2=\dfrac{\sum(x_i-\bar{x})^4}{ns^4}-3$
 \end{description}
 \end{minipage}
 \end{tcolorbox}
@@ -87,7 +94,7 @@
 \begin{tcolorbox}[hbox, title=Linear regression]
 \begin{minipage}{0.4\textwidth}
 \begin{description}
-\item [Covariance] $s_{xy}=\dfrac{\sum x_iy_jn_{ij}}{n}-\bar{x}\bar{y}$
+\item [Covariance] $s_{xy}=\dfrac{\sum x_iy_j}{n}-\bar{x}\bar{y}$
 \item [Regression lines]:
       \begin{align*}
       \mbox{$y$ on $x$} & : y=\bar{y}+\dfrac{s_{xy}}{s_x^2}(x-\bar{x}) \\
